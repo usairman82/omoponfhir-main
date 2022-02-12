@@ -10,7 +10,8 @@ FROM tomcat:alpine
 ENV JDBC_URL=jdbc:postgresql://omop_v6:5432/omop?currentSchema=omop_v5 
 ENV JDBC_USERNAME=postgres 
 ENV JDBC_PASSWORD=password
-
+ENV AUTH_BASIC="client:secret"
+ENV FHIR_READONLY="False"
 RUN apk update
 RUN apk add zip postgresql-client
 
